@@ -10,7 +10,9 @@ function compute(number1, number2) {
   } else if(mode = 2) {
     number1 * number2 = number1;
   } else if(mode = 3) {
-    number1 / number2 = number1;
+    if (number1 != 0 && number2 != 0) {
+      number1 / number2 = number1;
+    }
   }
   return number1;
 }
