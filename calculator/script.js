@@ -106,6 +106,15 @@ function inputOver(inputNum) {
   decimalNumber = 0;
 }
 
+//delete
+function backSpace() {
+  if (isInput1Over == false) {
+    if (decimalNumber == 0) {
+      input1 = input1;
+    }
+  }
+}
+
 //display
 function display() {
   const display = document.getElementById("display");
