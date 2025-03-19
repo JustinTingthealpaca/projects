@@ -21,20 +21,23 @@ function key(keyPressed) {
     inputNumber(keyPressed);
     console.log(keyPressed);
   } else if (keyPressed == 10) { //decimal
-    decimalMode();
+    decimalNumber = 1;
   } else if (keyPressed == 101) {  //plus
     inputOver(1);
     mode = 0;
     modeName = "+"                          
   } else if (keyPressed == 102) { // minus
-      isInput1Over = true;
-      mode = 1;
-      modeName = "-"   
+    inputOver(1);
+    isInput1Over = true;
+    mode = 1;
+    modeName = "-"   
   } else if (keyPressed == 103) {
+    inputOver(1);
     isInput1Over = true;
     mode = 2;
     modeName = "&times;";
   } else if (keyPressed == 104) {
+    inputOver(1);
     isInput1Over = true;
     mode = 3;
     modeName = "&div;";
@@ -49,6 +52,7 @@ function key(keyPressed) {
 
 //calculate
 function compute(number1, number2) {
+  inputOver(2);
   if (mode == 0) {
      total = number1 + number2;
   } else if (mode == 1) {
@@ -65,6 +69,7 @@ function compute(number1, number2) {
   return total;
 }
 
+//keys work and decimal
 function inputNumber(number) {
     if (decimalNumber == 0) {
       if (isInput1Over == false) {
@@ -75,23 +80,29 @@ function inputNumber(number) {
         input2 += number;
       }
     } else {
-      if (isInput1Over == true) {
-        input1 = input1 * (decimalNumber ** 10);
-        decimalNumber ++;
+      let amountOfDecimalDigits = 10 ** decimalNumber;
+      if (isInput1Over == false) {
+        input1 = input1 * amountOfDecimalDigits;
         input1 += number;
-        input1 = input1 / (decimalNumber ** 10); 
-      } else if (isInput2Over == false) {
-        input2 = input2 * (decimalNumber ** 10);
+        input1 = input1 / amountOfDecimalDigits; 
         decimalNumber ++;
+        console.log(amountOfDecimalDigits);
+      } else if (isInput2Over == false) {
+        input2 = input2 * amountOfDecimalDigits;
         input2 += number;
-        input2 = input2 / (decimalNumber ** 10);
+        input2 = input2 / amountOfDecimalDigits; 
+        decimalNumber ++;
       }
     }
     console.log(input1);
     console.log(input2);
 }
+
+//inputOver thing
 function inputOver(inputNum) {
-  isInput1Over = true;
+  if (inputNum == 1) {
+    isInput1Over = true;
+  }
   decimalNumber = 0;
 }
 
