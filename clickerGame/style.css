@@ -1,0 +1,14 @@
+body {
+    position: relative;
+    text-align: center;
+    font-size: large;
+    top: 25%;
+}
+
+#increase {
+    left: 25%;
+}
+
+#decrease {
+    left: 75%;
+}
