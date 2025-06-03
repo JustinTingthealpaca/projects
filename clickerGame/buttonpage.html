@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <main>
         <p id="display">0</p>
-        <button id="increase" onclick="add(1)">Increase Number</button>
-        <button id="decrease" onclick="add(-1)">Decrease Number</button>
+        <button id="increase" onclick="add()">Click</button><br>
+        <div id="upgradesPage"><span id="dropdownStart">_Upgrades:_</span><span id="checkUpgrades">a</span></div>
     </main>
+      <div id="button1Page">
+        <button id="button1" onclick="button(0)">+1 CLICK</button>
+        <span id="costs1" class="costs">Costs: <span id="costAmount1" class="costAmount">10</span></span>
+      </div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,14 +1,55 @@
 body {
-    position: relative;
-    text-align: center;
-    font-size: large;
-    top: 25%;
+    margin-left: 16px;
+    font-size: x-large;
+    font-family: monospace;
+    background-color: darkblue;
+    color:lightgreen;
+}
+
+button {
+    background-color: greenyellow;
+    color:black;
+    border-color: white;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+button:hover {opacity: 1;}
+
+#display {
+    position: absolute;
+    top: 16px;
 }
 
 #increase {
-    left: 25%;
+    position: absolute;
+    top: 70px;
 }
 
-#decrease {
-    left: 75%;
+#upgradesPage {
+    background-color: greenyellow;
+    color:black;
+    border-color: white;
+    opacity: 0.8;
+    transition: 0.3s;
+    position: absolute;
+    top: 162px;
+}
+#checkUpgrades {opacity: 0;}
+#upgradesPage:hover #checkUpgrades{opacity: 1;}
+
+.costs {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#button1Page {
+    width: fit-content;
+    margin-top: 5%;
+    position: absolute;
+    top: 194px;
+}
+
+#button1Page:hover .costs {
+    display: fixed;
+    opacity: 1;
 }
